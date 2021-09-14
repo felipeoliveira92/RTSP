@@ -45,6 +45,8 @@ namespace RTSP
             this.videoCapture2 = new VisioForge.Controls.UI.WinForms.VideoCapture();
             this.videoCapture3 = new VisioForge.Controls.UI.WinForms.VideoCapture();
             this.videoCapture4 = new VisioForge.Controls.UI.WinForms.VideoCapture();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // button1
@@ -655,11 +657,27 @@ namespace RTSP
             this.videoCapture4.Virtual_Camera_Output_LicenseKey = null;
             this.videoCapture4.VLC_Path = null;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Location = new System.Drawing.Point(917, 440);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(128, 43);
+            this.btnPrint.TabIndex = 17;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "JPEG Files|*.jpg|GIF Files|*.gif|PNG Files|*.png";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 495);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.videoCapture4);
             this.Controls.Add(this.videoCapture3);
             this.Controls.Add(this.videoCapture2);
@@ -701,6 +719,8 @@ namespace RTSP
         private VisioForge.Controls.UI.WinForms.VideoCapture videoCapture2;
         private VisioForge.Controls.UI.WinForms.VideoCapture videoCapture3;
         private VisioForge.Controls.UI.WinForms.VideoCapture videoCapture4;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

@@ -115,5 +115,15 @@ namespace RTSP
         {
             videoSelected = "videoCapture2";
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                videoCapture1.Frame_Save(saveFileDialog1.FileName, VisioForge.Types.VFImageFormat.JPEG,85);
+                videoCapture1.WMV_CustomProfile_SaveToFile(VisioForge.Types.OutputFormat.VFMPEGTSOutput, saveFileDialog1.FileName);
+            }
+            
+        }
     }
 }

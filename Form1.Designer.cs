@@ -47,6 +47,8 @@ namespace RTSP
             this.videoCapture4 = new VisioForge.Controls.UI.WinForms.VideoCapture();
             this.btnPrint = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -672,11 +674,20 @@ namespace RTSP
             // 
             this.saveFileDialog1.Filter = "JPEG Files|*.jpg|GIF Files|*.gif|PNG Files|*.png";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(1063, 310);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(420, 235);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 495);
+            this.ClientSize = new System.Drawing.Size(1532, 676);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.videoCapture4);
             this.Controls.Add(this.videoCapture3);
@@ -697,6 +708,7 @@ namespace RTSP
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DooR";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -721,6 +733,7 @@ namespace RTSP
         private VisioForge.Controls.UI.WinForms.VideoCapture videoCapture4;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

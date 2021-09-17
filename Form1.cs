@@ -118,11 +118,18 @@ namespace RTSP
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            /*
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 videoCapture1.Frame_Save(saveFileDialog1.FileName, VisioForge.Types.VFImageFormat.JPEG,85);
-                videoCapture1.WMV_CustomProfile_SaveToFile(VisioForge.Types.OutputFormat.VFMPEGTSOutput, saveFileDialog1.FileName);
-            }
+            }*/
+
+            Bitmap bitmap = new Bitmap(videoCapture1.Width, videoCapture1.Height);
+            Graphics graphics = Graphics.FromImage(bitmap);
+
+            graphics.CopyFromScreen(videoCapture1.Location.X, videoCapture1.Location.Y, videoCapture1.Location.X, videoCapture1.Location.Y, new Size(1280, 720), CopyPixelOperation.SourceCopy);
+
+            pictureBox1.Image = bitmap;
             
         }
     }
